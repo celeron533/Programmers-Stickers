@@ -4,7 +4,7 @@
 请移步`output`文件夹自取
 
 ## Build Environment
-ImageMagick on Windows
+[ImageMagick](https://github.com/ImageMagick/ImageMagick) on Windows
 
 ## License
 MIT
