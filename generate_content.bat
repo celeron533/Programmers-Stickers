@@ -1,1 +1,1 @@
-FOR /R .\source %%I IN (*.txt) DO magick -size 240x240 -font SimHei label:@source\\%%~nxI output\\%%~nI.png
+FOR /R .\source %%I IN (*.txt) DO magick -size 210x210 -font SimHei label:@source\\%%~nxI -bordercolor White -border 15 output\\%%~nI.png
