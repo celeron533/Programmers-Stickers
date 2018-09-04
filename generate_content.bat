@@ -1,1 +1,1 @@
-FOR /R .\source %%I IN (*.txt) DO magick -size 210x210 -font SimHei label:@source\\%%~nxI -bordercolor White -border 15 output\\%%~nI.png
+FOR /R .\source %%I IN (*.txt) DO IF NOT EXIST output\%%~nI.png  magick -size 210x210 -font SimHei label:@source\\%%~nxI -bordercolor White -border 15 output\\%%~nI.png
