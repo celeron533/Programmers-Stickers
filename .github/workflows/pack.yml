@@ -1,0 +1,24 @@
+name: Pack output files
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: zip output folder
+        run: |
+          cd output
+          zip -r output.zip *
+      - name: upload to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: output/output.zip
+          tag: ${{ github.ref }}
+          prerelease: true
