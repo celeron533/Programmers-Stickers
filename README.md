@@ -4,6 +4,8 @@
 请移步源代码 `output` 文件夹自取
 或从Github `release` 中直接下载生成的PNG文件
 
+[![Github All Releases](https://img.shields.io/github/downloads/celeron533/Programmers-Stickers/total.svg)]()
+
 ## Generate Images
 1. Get [ImageMagick](https://github.com/ImageMagick/ImageMagick) on Windows
 2. Run `generate_content.bat`
