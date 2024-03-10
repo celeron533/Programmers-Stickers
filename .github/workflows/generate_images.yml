@@ -1,0 +1,15 @@
+name: Generate Images
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install ImageMagick
+      run: choco install imagemagick
+    - name: Generate images
+      run: .\generate_content.bat
